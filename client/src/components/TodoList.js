@@ -6,7 +6,14 @@ import Todo from "./Todo";
 class TodoList extends React.Component {
   getTodos() {
     return this.props.todos.map((todo) => {
-      return <Todo key={todo.id} {...todo} />;
+      return (
+        <Todo
+          key={todo.id}
+          {...todo}
+          deleteTodo={this.props.deleteItem}
+          updateTodo={this.props.updateItem}
+        />
+      );
     });
   }
   render() {

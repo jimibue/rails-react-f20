@@ -8,6 +8,7 @@ class Api::ItemsController < ApplicationController
 
   # end
   def create
+
     #santiazing is more crucial
     item = Item.new(item_params)
     if (item.save)
